@@ -1,0 +1,27 @@
+les containers :
+LES LISTES: include <list>
+std::list (container templaté) :
+std::list<int>	lst1;
+
+lst.push_back(10);//permet d'ajouter un int à la fin de la liste
+un itérateur = grossomodo un pointeur
+on les utilise comme suit :
+lst::list<int>::const_iterator	it;//qu'on va utiliser pour itérer sur notre liste
+lst::list<int>::const_iterator	ite = lst1.end();//correspond à la fin de la liste
+for (it = lst1.begin(); it != ite; ++it)
+{
+	std::cout << *it << std::endl;
+}
+
+LES MAPS: include <map>
+std::map<std::string, int>	map1;//tableau avec deux types de données différentes;
+map1["kelly"] = 37;//permet de naviguer dans le tableau via les strings
+
+LES VECTEURS: include <vector>
+std::vector<int>	v1;//tableau par défaut => aller voir ce que ça renvoit
+std::vector<int>	v2(42, 100);//tableau qui va contenir 42 lignes de 100 variables int.
+
+LES ALGORiTHMES : include <algorithm>
+collection de fonctions, d'algorithmes, préimplémentés, qui peuvent opérer sur des collections.
+ex:
+for_each(lst.begin(), lst.end(), fonction_a_iterer);//de begin à end, applique la fonction a itérer.
