@@ -6,7 +6,7 @@
 /*   By: kbrener- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 15:50:28 by kbrener-          #+#    #+#             */
-/*   Updated: 2024/11/29 16:33:03 by kbrener-         ###   ########.fr       */
+/*   Updated: 2024/12/02 10:11:24 by kbrener-         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -14,10 +14,19 @@
 #include <cstdlib>  // pour rand() et srand()
 #include <ctime>    // pour time()
 
+void	fill_vector(std::vector<int> & largeVector) {
+	std::srand(static_cast<unsigned int>(std::time(0)));
+
+	for (int i = 0; i < 10000; ++i) {
+	largeVector[i] = std::rand();
+	}
+}
 
 int main()
 {
 Span sp = Span(5);
+Span sp1 = Span(5);
+try {
 sp.addNumber(6);
 sp.addNumber(3);
 sp.addNumber(17);
@@ -25,16 +34,20 @@ sp.addNumber(9);
 sp.addNumber(11);
 std::cout << sp.shortestSpan() << std::endl;
 std::cout << sp.longestSpan() << std::endl;
-
-/*MY OWN TESTS*/
-const int SIZE = 10000;
-std::vector<int> largeVector(SIZE);
-
-std::srand(static_cast<unsigned int>(std::time(0)));
-
-for (int i = 0; i < SIZE; ++i) {
-	largeVector[i] = std::rand();
+sp.addNumber(5);
+} catch (std::exception & e) {
+	std::cout<<"ERROR : "<<e.what()<<std::endl;
 }
+try {
+sp1.addNumber(6);
+std::cout << sp1.shortestSpan() << std::endl;
+std::cout << sp1.longestSpan() << std::endl;
+} catch (std::exception & e) {
+	std::cout<<"ERROR : "<<e.what()<<std::endl;
+}
+/*MY OWN TESTS*/
+std::vector<int> largeVector(10000);
+fill_vector(largeVector);
 try {
 	Span	sp2(15000);
 
