@@ -1,4 +1,4 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
@@ -6,9 +6,9 @@
 /*   By: kbrener- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 15:50:28 by kbrener-          #+#    #+#             */
-/*   Updated: 2024/12/02 10:11:24 by kbrener-         ###   ########.fr       */
+/*   Updated: 2024/12/06 11:59:11 by kbrener-         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 #include "Span.hpp"
 #include <cstdlib>  // pour rand() et srand()
@@ -53,6 +53,8 @@ try {
 
 	sp2.addNumberS(largeVector.begin(), largeVector.end());
 	sp2.printSpan();
+	std::cout << sp2.shortestSpan() << std::endl;
+	std::cout << sp2.longestSpan() << std::endl;
 	sp.addNumberS(largeVector.begin(), largeVector.end());
 } catch (std::exception & e) {
 	std::cout<<"ERROR : "<<e.what()<<std::endl;

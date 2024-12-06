@@ -1,14 +1,14 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   easyfind.tpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbrener- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 15:23:34 by kbrener-          #+#    #+#             */
-/*   Updated: 2024/11/29 12:05:21 by kbrener-         ###   ########.fr       */
+/*   Updated: 2024/12/06 11:47:14 by kbrener-         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 #include <algorithm>
 #include <list>
@@ -17,8 +17,8 @@
 #include <iostream>
 #include <exception>
 
-#ifndef EASYFIND_HPP
-#define EASYFIND_HPP
+#ifndef EASYFIND_TPP
+#define EASYFIND_TPP
 
 class	TargetNotFind : public std::exception {
 	private:
